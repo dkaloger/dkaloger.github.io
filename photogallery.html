@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Main</a></li>
+                <li><a href="photogallery.html">Photo Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="photo-gallery">
+ 
+        <div class="grid" id="photos"></div>
+    </section>
+
+    <script>
+        const photosDiv = document.getElementById('photos');
+        photosDiv.innerHTML = ''; // Clear previous photos
+    
+        // Create an array of image file paths from "Photos/1.jpg" to "Photos/10.jpg"
+        const imagePaths = [];
+        for (let i = 1; i <= 10; i++) {
+            imagePaths.push(`Photos/${i}.jpg`);
+        }
+    
+        // Create and append image elements to the 'photos' div
+        for (const imagePath of imagePaths) {
+            const photoDiv = document.createElement('div');
+            photoDiv.className = 'photo';
+            const photo = document.createElement('img');
+            photo.src = imagePath;
+            photo.alt = 'Image';
+    
+            // Add a click event listener to open the image in a new tab
+            photo.addEventListener('click', () => {
+                window.open(imagePath, '_blank');
+            });
+    
+            photoDiv.appendChild(photo);
+            photosDiv.appendChild(photoDiv);
+        }
+    </script>
+</body>
+</html>

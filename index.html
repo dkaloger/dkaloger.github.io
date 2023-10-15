@@ -1,7 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dkaloger - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Main</a></li>
+            <li><a href="photogallery.html">Photo Gallery</a></li>
+        </ul>
+    </nav>
+</header>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+    <section id="about" class="section">
+        <h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/255px-Flag_of_Greece.svg.png" alt="Greek Flag" style="height: 1em; vertical-align: middle; margin-right: 5px;">
+            Student
+        </h3>
+        
+             <img class = "tools" src = "https://assets.stickpng.com/images/62e131df7fe3599fdd46ecb3.png">
+             <img class = "tools" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1200px-Logo_C_sharp.svg.png">
+             <img class = "tools" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png">
+             <img class = "tools" src = "https://d2t1xqejof9utc.cloudfront.net/screenshots/pics/7e1c19d75085bfb7004db332a7665fc8/large.png">
+             <img class = "tools" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/512px-Blender_logo_no_text.svg.png">
+             <img class = "tools" src = "https://www.freepnglogos.com/uploads/javascript/logo-html-5-css-javascript-source-code-for-the-taking-23.png">
+        
+    </section>
+    <section id="projects" class="section">
+        <h1>Projects</h1>
+        <div class="project-container">
+            <a href="https://github.com/dkaloger/WallpaperOS" target="_blank">
+                <img id="repo1" alt="e">
+            </a>
+            <a href="https://github.com/dkaloger/Pplus" target="_blank">
+                <img id="repo2" alt="e">
+            </a>
+            <a href="https://github.com/dkaloger/unity-lib" target="_blank">
+                <img id="repo3" alt="e">
+            </a>
+        
+        </div>
+        <h1>Creations</h1>
+        <div class="project-container">
+            <a href="https://dkaloger.itch.io/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Itch.io_logo.svg/2560px-Itch.io_logo.svg.png" alt="Itch.io">
+            </a>
+            <a href="https://dkaloger.artstation.com/" target="_blank">
+                <img src="https://ww2.freelogovectors.net/wp-content/uploads/2019/03/artstationlogo.png" alt="artstationlogo">
+            </a>
+         </div>
+        </div>
+        <h1>Engineering</h1>
+        <div class="project-container">
+            <a href="https://www.f1inschools.com/" target="_blank">
+                <img src="F1iS.jpg" alt="F1iS">
+            </a>
+         </div>
+        
+    </section>
+    <section id="contact" class="section">
+        <!-- ... -->
+    </section>
+    <footer>
+        <h5>Email: dkaloger@outlook.com</h5>
+        <h5 id="copyright"></h5>
+    </footer>
+
+    
+    <script>
+   // Get the current year
+   var currentYear = new Date().getFullYear();
+    
+    // Set the current year in the HTML
+    document.getElementById("copyright").innerText ="Copyright ©"+ currentYear+" All rights reserved";
+
+
+        // Generate a random number between 1 and 99999 for the image source
+        var randomNum = Math.floor(Math.random() * 99999) + 1;
+        
+        // Set the image source URLs for all repositories using the same random number
+        document.getElementById("repo1").src = "https://opengraph.githubassets.com/" + randomNum + "/dkaloger/WallpaperOS";
+        document.getElementById("repo2").src = "https://opengraph.githubassets.com/" + randomNum + "/dkaloger/Pplus";
+        document.getElementById("repo3").src = "https://opengraph.githubassets.com/" + randomNum + "/dkaloger/unity-lib";
+    </script>
 </body>
 </html>
+
